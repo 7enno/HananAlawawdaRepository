@@ -22,7 +22,7 @@ Ranking highly in search results is only half the battle; capturing the click is
 The model proved generalization across unseen clients when grouped honestly. 
 * **Honest Grouped Split MAE:** 0.00207
 
-![Feature Importance](image_8b9f8c.png)
+![Feature Importance](1.png)
 
 The model leans heavily on historical momentum (`feature_ctr_prev30` at ~57%) and query-mix signals (`anon_share` and `rare_share` at ~13-14% each).
 
