@@ -23,7 +23,7 @@ The Random Forest model successfully learned signal interactions that the baseli
 * **Baseline Mean Absolute Error (MAE):** 0.00285
 * **Model MAE:** 0.00273
 
-![Feature Importance](image_8d6241.png)
+![Feature Importance](1.png)
 
 ## Limitations
 This model provides **directional, decision-support guidance**, not causal certainty. We observed strong associations between our top features and CTR, but this does not definitively prove that altering these metrics will force Google's algorithm to award more clicks. 
