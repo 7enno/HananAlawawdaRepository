@@ -1,10 +1,12 @@
 # Decoding Search Visibility: A Ranking Signal Analysis of Click-Through Rates
 
 ## Abstract
-This research investigates which historical and query-level signals most strongly drive search Click-Through Rate (CTR) beyond raw ranking position. Using the FlyRank ML Internship dataset, we engineered features including 30-day momentum, query concentration, and visibility metrics. We trained a Random Forest Regressor and validated it across distinct client sets using `GroupShuffleSplit` to prevent domain leakage. The model successfully outperformed naive baseline splits, revealing that historical click-through rate and anonymized query share are the most critical secondary drivers of clicks. These findings provide a decision-support heuristic, allowing content teams to prioritize specific optimizations for pages underperforming their expected CTR.
+This research serves as a case study for FlyRank's editorial teams, who face the ongoing challenge of content decay: knowing exactly which declining pages to refresh first. To solve this, we investigated which historical and query-level signals most strongly drive search Click-Through Rate (CTR) beyond raw ranking position. Using the FlyRank ML Internship dataset (79 million rows), we engineered features including 30-day momentum and query concentration. We trained a Random Forest Regressor and validated it across distinct client sets using `GroupShuffleSplit` to prevent domain leakage. The model successfully outperformed naive baseline splits, revealing that a page's anonymized query share is a critical secondary driver of clicks, providing a data-backed heuristic to prioritize content updates.
 
 ## Introduction / Problem Statement
-Ranking highly in search results is only half the battle; capturing the click is the final conversion. Content teams often struggle to prioritize which pages to optimize. This analysis supports the decision of *where to allocate editorial resources* by identifying the specific signals that maximize CTR, allowing teams to intervene when a page's clicks are declining.
+Ranking highly in search results is only half the battle; capturing the click is the final conversion. For FlyRank's content teams, this creates a specific operational problem: when organic traffic drops across hundreds of pages, how do you decide where to allocate limited editorial resources? 
+
+This analysis serves as a decision-support tool. By identifying the specific signals that maximize CTR on real production search data, we can build a prioritized queue that tells editors exactly which pages are underperforming their potential and what type of optimization (e.g., meta tag refresh vs. long-tail keyword targeting) to apply.
 
 ## Data
 * **Source:** FlyRank ML Internship dataset (Release: internship-warehouse).
